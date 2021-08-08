@@ -1,0 +1,25 @@
+<ng-container [formGroup]="innerForm">
+  <div class="input-group">
+    <label class="sr-only" for="name">Nom</label>
+    <input [class.is-invalid]="nomControl.invalid && nomControl.touched"
+           autocomplete="off"
+           class="form-control"
+           formControlName="nom"
+           id="name"
+           placeholder="nom"
+           type="text">
+    <div class="invalid-feedback">
+      Merci de choisir un nom
+    </div>
+  </div>
+  <div class="input-group">
+    <label class="sr-only" for="pwd">Prenom</label>
+    <input [class.is-invalid]="prenomControl.invalid && prenomControl.touched" autocomplete="off" class="form-control" formControlName="prenom"
+           id="pwd"
+           placeholder="prenom"
+           type="text">
+    <div class="invalid-feedback">
+      Merci de choisir un pr&eacute;nom
+    </div>
+  </div>
+</ng-container>
