@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "yacinemeddah": {
+    "angular-cv": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "yacinemeddah:build:production"
+              "browserTarget": "angular-cv:build:production"
             },
             "development": {
-              "browserTarget": "yacinemeddah:build:development"
+              "browserTarget": "angular-cv:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "yacinemeddah:build"
+            "browserTarget": "angular-cv:build"
           }
         },
         "test": {
@@ -116,8 +116,9 @@
       }
     }
   },
-  "defaultProject": "yacinemeddah",
+  "defaultProject": "angular-cv",
   "cli": {
+    "analytics": "44621ad6-9f15-4aaf-995a-4770f8ac162c",
     "defaultCollection": "@angular-eslint/schematics"
   }
 }

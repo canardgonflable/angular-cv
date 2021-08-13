@@ -1,0 +1,163 @@
+.formation {
+  margin: 4vw;
+  line-height: 1.9;
+}
+
+.formationTitre {
+  display: inline-block;
+  position: relative;
+  font-family: "Space Mono", monospace;
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.formationTitre::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  -webkit-animation: souligneTitre 2s ease-in-out 1s;
+          animation: souligneTitre 2s ease-in-out 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes souligneTitre {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes souligneTitre {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+#becodeLogoLink {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+#becodeLogoLink:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#becodeLogo {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2vw;
+  margin-left: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo_Becode {
+  padding-right: 1vw;
+}
+
+.cuisine {
+  font-size: 2vw;
+  font-family: "Roboto Mono", monospace;
+  margin-left: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cuisineLogo {
+  padding-right: 0.5vw;
+}
+
+.ecole {
+  font-family: "Space Mono", monospace;
+  font-size: 2vw;
+  margin-left: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ecoleLogo {
+  padding-right: 0.5vw;
+}
+
+.extraScolaire {
+  margin: 4vw;
+  margin-bottom: 1vw;
+  line-height: 1.9;
+}
+
+.autreExperience {
+  display: inline-block;
+  position: relative;
+  font-family: "Space Mono", monospace;
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.autreExperience::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  -webkit-animation: souligneTitre 2s ease-in-out 1s;
+          animation: souligneTitre 2s ease-in-out 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#Coderdojo {
+  font-family: "Space Mono", monospace;
+  font-size: 2vw;
+  margin-left: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.coderdojoLogo {
+  padding-right: 0.5vw;
+}
+
+#redCross {
+  font-family: "Space Mono", monospace;
+  font-size: 2vw;
+  margin-left: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.redcrossLogo {
+  padding-right: 0.5vw;
+}
+/*# sourceMappingURL=xp.component.css.map */
