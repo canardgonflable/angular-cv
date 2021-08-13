@@ -1,27 +1,25 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
-import { IsLoggedGuard } from "./security/is-logged.guard";
-import { LoginComponent } from "./login/login.component";
+import { NavBarComponent } from "./nav-bar/nav-bar.component";
+import { SidebarComponent } from "./sidebar/sidebar.component";
+import { BadgesComponent } from "./badges/badges.component";
+import { XpComponent } from "./xp/xp.component";
+import { ResumeComponent } from "./resume/resume.component";
+import { MainpageComponent } from "./mainpage/mainpage.component";
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: '', component: HomeComponent, canActivate: [IsLoggedGuard]},
-  {
-    path: 'students',
-    loadChildren: () => import('./students/students.module').then(m => m.StudentsModule),
-    canActivate: [IsLoggedGuard],
-  },
-  {
-    path: 'classes',
-    loadChildren: () => import('./classes/classes.module').then(m => m.ClassesModule),
-    canActivate: [IsLoggedGuard]
-  },
+  { path: "", component: HomeComponent },
+  { path: "navbar", component: NavBarComponent },
+  { path: "info", component: SidebarComponent },
+  { path: "badges", component: BadgesComponent },
+  { path: "xp", component: XpComponent },
+  { path: "resume", component: ResumeComponent },
+  { path: "mainpage", component: MainpageComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

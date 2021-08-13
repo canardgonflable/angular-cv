@@ -1,0 +1,98 @@
+.formation {
+  margin: 4vw;
+  line-height: 1.9;
+}
+.formationTitre {
+  display: inline-block;
+  position: relative;
+  font-family: "Space Mono", monospace;
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.formationTitre::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  animation: souligneTitre 2s ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes souligneTitre {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+#asdoriaLogo{
+  font-family: "Roboto Mono", monospace;
+  font-size: 2vw;
+  margin-left: 1vw;
+  display: flex;
+  align-items: center;
+}
+.logo_asdoria {
+  width: 100px;
+}
+
+.ecole {
+  font-family: "Space Mono", monospace;
+  font-size: 2vw;
+  margin-left: 1vw;
+  display: flex;
+  align-items: center;
+}
+.ecoleLogo {
+  width: 100px;
+}
+
+.extraScolaire {
+  margin: 4vw;
+  margin-bottom: 1vw;
+  line-height: 1.9;
+}
+.autreExperience {
+  display: inline-block;
+  position: relative;
+  font-family: "Space Mono", monospace;
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+.autreExperience::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  animation: souligneTitre 2s ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+#Coderdojo {
+  font-family: "Space Mono", monospace;
+  font-size: 2vw;
+  margin-left: 1vw;
+  display: flex;
+  align-items: center;
+}
+.coderdojoLogo {
+  padding-right: 0.5vw;
+}
+#redCross {
+  font-family: "Space Mono", monospace;
+  font-size: 2vw;
+  margin-left: 1vw;
+  display: flex;
+  align-items: center;
+}
+.redcrossLogo {
+  padding-right: 0.5vw;
+}

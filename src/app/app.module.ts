@@ -1,42 +1,32 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HTTP_INTERCEPTORS } from "@angular/common/http";
-import { SharedModule } from "./shared/shared.module";
-import { LoginComponent } from './login/login.component';
-import { AuthenticationInterceptor } from "./security/authentication.interceptor";
-import { SecurityInterceptor } from "./security.interceptor";
-import { NgxsModule } from "@ngxs/store";
-import { environment } from "../environments/environment";
-import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
-import { AppState } from "./state/app.state";
+import { HomeComponent } from './home/home.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { BadgesComponent } from './badges/badges.component';
+import { XpComponent } from './xp/xp.component';
+import { ResumeComponent } from './resume/resume.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    HomeComponent,
+    NavBarComponent,
+    SidebarComponent,
+    BadgesComponent,
+    XpComponent,
+    ResumeComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    SharedModule,
-    NgxsModule.forRoot([AppState], {
-      developmentMode: !environment.production
-    }),
-    NgxsReduxDevtoolsPluginModule.forRoot({
-      disabled: !!environment.production
-    }),
+    AppRoutingModule
   ],
-  providers: [
-    // FIXME: Multiplte interceptors not working
-    // @see https://dev.to/angular/that-s-why-your-angular-errorinterceptor-may-not-work-5-seconds-fix-52m8
-    // also https://stackoverflow.com/questions/45633102/add-multiple-http-interceptors-to-angular-application
-    {provide: HTTP_INTERCEPTORS, useClass: SecurityInterceptor, multi: true},
-    {provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true},
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
